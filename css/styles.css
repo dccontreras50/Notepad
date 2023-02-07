@@ -11,28 +11,27 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
 }
-.titulo{
-    width: center;
+#title{
+    margin: 20px 0;
 }
 #cuadrodetexto{
 
     border-radius: 10px;
     margin-top: 10px;
-    margin-left: 30px;
+    margin-left: 10px;
     margin-bottom: 50px;
-
     border-radius: 10px;
+
     min-height: 450px;
-    max-height: 450px;
-    max-width: 1150px;
-    min-width: 1100px;
+    max-height: 500px;
+    min-width: 100%;
 }
 textarea{
     font-family: 'Quicksand', sans-serif;
     font-size: 18px;
     background: no-repeat;
     color: rgb(81, 0, 73);
-    padding: 15px;
+    padding: 14px;
     border-style: dashed;
     border-color: green;
     border-width: 2px;
@@ -46,8 +45,9 @@ button{
     background: rgb(75, 21, 101);
     border: rgb(109, 18, 102);
     color: #ffffff;
-    margin-left: -90%;
     transition: .5s;
+    /* centrado del boton */
+    margin: -20px 30% 30px 
 }
 
 button:hover{
@@ -55,3 +55,4 @@ button:hover{
     background: rgb(50, 9, 70);
     border: rgb(242, 242, 242);
 }
+
