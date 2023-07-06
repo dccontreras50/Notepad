@@ -18,6 +18,11 @@
 
 
     <link rel="stylesheet" href="css/styles.css">
+    <!-- pdf script cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.68/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.68/vfs_fonts.js"></script>
+
+
 </head>
 
 <body>
@@ -30,6 +35,8 @@
                 <textarea name="text" id="cuadrodetexto" cols="30" rows="10">Here again ...</textarea>
                 <button id="switch-button"><i class="bi bi-arrow-left-right"></i></button>
                 <button id="btncopy">copy your text</button>
+                <button id="pdfbtn" onclick="exportToPDF()">PDF</button>
+
             </div>
 
             <div class="col-lg-7">

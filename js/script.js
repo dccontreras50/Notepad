@@ -21,3 +21,20 @@ switchButton.addEventListener("click", function() {
     myDiv.classList.add("col-lg-5");
   }
 });
+
+
+
+
+function exportToPDF() {
+  var contenido = document.getElementById('cuadrodetexto').value;
+
+  // Crear el objeto de definición del documento PDF
+  var docDefinition = {
+    content: [
+      { text: contenido }
+    ]
+  };
+
+  // Generar el PDF
+  pdfMake.createPdf(docDefinition).download('archivo.pdf');
+}
