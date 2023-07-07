@@ -38,13 +38,15 @@ body {
         position: absolute;
         left: -3000px;
     }
+    #webb{
+    	margin-top: 30px;
+    }
 }
 
 #cuadrodetexto {
 
     border-radius: 10px;
     margin-top: 10px;
-    margin-left: 10px;
     margin-bottom: 50px;
     border-radius: 10px;
 
