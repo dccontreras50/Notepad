@@ -70,20 +70,22 @@ button {
     font-family: 'Quicksand', sans-serif;
     width: 200px;
     height: 50px;
-    font-size: 16px;
-    border-radius: 10px;
-    background: rgb(75, 21, 101);
-    border: rgb(109, 18, 102);
     color: #ffffff;
-    transition: .5s;
-    /* centrado del boton */
-    /* margin: -20px 30% 30px */
+  	font-size: 16px;
+  	font-weight: bold;
+  	text-align: center;
+  	text-decoration: none;
+  	text-transform: uppercase;
+  	background-color: #ff5f6d;
+  	border-radius: 50px;
+  	border: none;
+  	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  	transition: background-color 0.3s ease;
 }
 
 button:hover {
-    font-size: 16px;
-    background: rgb(50, 9, 70);
-    border: rgb(242, 242, 242);
+    background-color: #ff2e3d;
+  	cursor: pointer;
 }
 
 #pdfbtn{
