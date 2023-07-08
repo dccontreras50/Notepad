@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="bloc de notas para tu disfrute">
-    <meta name="keywords" content="bloc de notas gratis, bloc de notas para tu disfrute, agenda online, bloc de notas online">
+    <meta name="keywords" content="bloc de notas gratis, bloc de notas para tu disfrute, agenda online, bloc de notas online, plain text editor, notepad online, online note pad, notepad, text online, notepad free, note online, online notepad editor, web notepad, plain text editor, notes online, online text editor, microsoft notepad online, note pad online, note take, google notepad online, notepad web, textpad online">
 
     <title>Bloc de notas para tu disfrute</title>
     <!-- bootstrap icons -->
@@ -33,10 +33,13 @@
         <div class="row">
             <h2 id="title">Bloc de notas para tu disfrute</h2>
 
+
             
             <div id="agrandarcuadrotxt" class="col-lg-5">
                 <textarea name="text" id="cuadrodetexto" cols="30" rows="10">Here again ...</textarea>
+
                 <button id="switch-button"><i class="bi bi-arrow-left-right"></i></button>
+                <button id="darkModeButton" onclick="toggleDarkMode()"><i class="bi bi-moon"></i><i class="bi bi-sun"></i></button>
                 <button id="btncopy">copy your text</button>
                 <button id="pdfbtn" onclick="exportToPDF()">PDF</button>
 
@@ -46,6 +49,7 @@
                 <div id="webb">
                     <iframe src="https://www.bing.com" width="100%" height="450px"></iframe>
                 </div>
+                <p>Convierte de texto a voz: busca beta.elevenlabs.io <i class="bi bi-arrow-up"></i></p>
                 <p>Algunos sitios web no pueden visualizarse desde aqui porque el navegador no lo permite.</p>
             </div>
         </div>
@@ -71,7 +75,8 @@
 
 
 
-    
+
+
 
 
 <!-- ADS -->
@@ -120,7 +125,8 @@
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 <!-- END ADS -->
-    
+
+
 </body>
 
 </html>

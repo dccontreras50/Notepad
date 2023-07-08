@@ -1,3 +1,5 @@
+// copy text
+
     const $content = document.getElementById('cuadrodetexto'),
         $btncopy = document.getElementById('btncopy'),
         $title = document.getElementById('title');
@@ -7,8 +9,17 @@ $btncopy.addEventListener('click', e =>{
     document.execCommand('copy');
 
     $title.innerHTML = 'Copiado!'
+
+    setTimeout(() => {
+    $title.innerHTML = 'Bloc de notas para tu disfrute';
+  }, 2000); // 2000 milisegundos = 2 segundos
+
 })
 
+
+
+
+// button switch
 var switchButton = document.getElementById("switch-button");
 var myDiv = document.getElementById("agrandarcuadrotxt");
 
@@ -24,6 +35,8 @@ switchButton.addEventListener("click", function() {
 
 
 
+// pdf
+
 
 function exportToPDF() {
   var contenido = document.getElementById('cuadrodetexto').value;
@@ -37,4 +50,10 @@ function exportToPDF() {
 
   // Generar el PDF
   pdfMake.createPdf(docDefinition).download('archivo.pdf');
+}
+
+
+function toggleDarkMode() {
+  var body = document.body;
+  body.classList.toggle("dark-mode");
 }
