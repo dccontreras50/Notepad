@@ -116,4 +116,18 @@ button{
 
 
 
-
+#publicidadtrefahso{
+	background-color: #cbcbcb;
+	overflow: hidden;
+	padding: 10px 90px;
+	width: 100%
+}
+#publicidadtrefahso a{
+	color: #000000;
+	text-decoration: none;
+}
+#publicidadtrefahso img{
+	float: left;
+	height: 90px;
+	margin-right: 30px;
+}
