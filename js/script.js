@@ -52,8 +52,21 @@ function exportToPDF() {
   pdfMake.createPdf(docDefinition).download('archivo.pdf');
 }
 
-
+// dark mode
 function toggleDarkMode() {
   var body = document.body;
   body.classList.toggle("dark-mode");
 }
+
+
+
+// Función para generar el audio
+function generarAudio() {
+  const texto = document.getElementById("cuadrodetexto").value; // Obtener el contenido del textarea
+  const synth = window.speechSynthesis; // Objeto de síntesis de voz del navegador
+  const utterance = new SpeechSynthesisUtterance(texto); // Crear una nueva instancia de mensaje de síntesis de voz
+  synth.speak(utterance); // Generar el audio
+}
+
+// Evento clic del botón
+document.getElementById("btn-generar").addEventListener("click", generarAudio);
