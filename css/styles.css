@@ -20,6 +20,22 @@ body {
     text-align: center;
 }
 
+/* Estilos barras de desplazamiento */
+    /* No son compatibles con todos los navegadores */
+    
+    ::-webkit-scrollbar {
+      width: 7px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: #fff;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background-color: #ff5f6d;
+      border-radius: 30px;
+    }
+
 #title {
     margin: 20px 0;
 }

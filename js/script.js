@@ -111,18 +111,20 @@ textarea.addEventListener("input", function() {
 
 // dibujo
 var canvas = new fabric.Canvas('canvas', {
-  width: window.innerWidth - 40, // Ancho del canvas sin contar el padding
+  width: window.innerWidth - 80,
   height: 500
 });
 var undoButton = document.getElementById('undoButton');
 var redoButton = document.getElementById('redoButton');
 var exportButton = document.getElementById('exportButton');
+var clearButton = document.getElementById('clearButton');
 var undoHistory = [];
 var redoHistory = [];
 
 undoButton.addEventListener('click', undo);
 redoButton.addEventListener('click', redo);
 exportButton.addEventListener('click', exportImage);
+clearButton.addEventListener('click', clearCanvas);
 
 canvas.isDrawingMode = true;
 canvas.freeDrawingBrush.width = 2;
@@ -165,7 +167,14 @@ function exportImage() {
   link.click();
 }
 
-// Actualizar el ancho del canvas al cambiar el tamaño de la ventana
+function clearCanvas() {
+  canvas.clear();
+  canvas.backgroundColor = '#ffffff';
+  canvas.renderAll();
+  undoHistory = [];
+  redoHistory = [];
+}
+
 window.addEventListener('resize', function() {
-  canvas.setWidth(window.innerWidth - 40);
+  canvas.setWidth(window.innerWidth - 80);
 });
