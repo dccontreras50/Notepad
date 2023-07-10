@@ -111,7 +111,8 @@ textarea.addEventListener("input", function() {
 
 // dibujo
 var canvas = new fabric.Canvas('canvas', {
-  width: window.innerWidth - 80,
+  // MODIFICA EL ANCHO DEL CANVAS CAMBIANDO EL NUMERO ANTES DE LA COMA (20,= +100%) (40,=100%) (80,=90% APROX)
+  width: window.innerWidth - 90,
   height: 500
 });
 var undoButton = document.getElementById('undoButton');
@@ -178,3 +179,67 @@ function clearCanvas() {
 window.addEventListener('resize', function() {
   canvas.setWidth(window.innerWidth - 80);
 });
+
+
+
+
+// codigo anterior canvas 100% borrador no funciona
+// var canvas = new fabric.Canvas('canvas', {
+//   width: window.innerWidth - 40, // Ancho del canvas sin contar el padding
+//   height: 500
+// });
+// var undoButton = document.getElementById('undoButton');
+// var redoButton = document.getElementById('redoButton');
+// var exportButton = document.getElementById('exportButton');
+// var undoHistory = [];
+// var redoHistory = [];
+
+// undoButton.addEventListener('click', undo);
+// redoButton.addEventListener('click', redo);
+// exportButton.addEventListener('click', exportImage);
+
+// canvas.isDrawingMode = true;
+// canvas.freeDrawingBrush.width = 2;
+// canvas.freeDrawingBrush.color = 'purple';
+
+// canvas.on('path:created', function(e) {
+//   undoHistory.push(e.path);
+//   redoHistory = [];
+// });
+
+// function undo() {
+//   if (undoHistory.length > 0) {
+//     var path = undoHistory.pop();
+//     redoHistory.push(path);
+//     canvas.remove(path);
+//     canvas.renderAll();
+//   }
+// }
+
+// function redo() {
+//   if (redoHistory.length > 0) {
+//     var path = redoHistory.pop();
+//     undoHistory.push(path);
+//     canvas.add(path);
+//     canvas.renderAll();
+//   }
+// }
+
+// function exportImage() {
+//   canvas.backgroundColor = '#ffffff';
+//   canvas.renderAll();
+
+//   var dataURL = canvas.toDataURL({
+//     format: 'jpeg',
+//     quality: 0.8
+//   });
+//   var link = document.createElement('a');
+//   link.href = dataURL;
+//   link.download = 'canvas_image.jpg';
+//   link.click();
+// }
+
+// // Actualizar el ancho del canvas al cambiar el tamaño de la ventana
+// window.addEventListener('resize', function() {
+//   canvas.setWidth(window.innerWidth - 40);
+// });
