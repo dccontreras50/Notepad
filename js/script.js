@@ -109,11 +109,9 @@ textarea.addEventListener("input", function() {
 
 
 
-
-
-
+// dibujo
 var canvas = new fabric.Canvas('canvas', {
-  width: 1000,
+  width: window.innerWidth - 40, // Ancho del canvas sin contar el padding
   height: 500
 });
 var undoButton = document.getElementById('undoButton');
@@ -166,3 +164,8 @@ function exportImage() {
   link.download = 'canvas_image.jpg';
   link.click();
 }
+
+// Actualizar el ancho del canvas al cambiar el tamaño de la ventana
+window.addEventListener('resize', function() {
+  canvas.setWidth(window.innerWidth - 40);
+});
