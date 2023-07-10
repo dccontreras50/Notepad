@@ -117,10 +117,11 @@ button{
   color: white;
 }
 
-
 .canvasbtns{
 	margin-top: 20px;
+	margin-bottom: 20px;
 }
+
 #canvasWrapper {
   width: 70%;
   margin: 0 auto;
