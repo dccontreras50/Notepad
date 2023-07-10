@@ -42,6 +42,10 @@ body {
     #webb{
     	margin-top: 30px;
     }
+    #btn-generar-audio{
+    	position: absolute;
+    	left: -3000px;
+    }
 }
 
 #agrandarcuadrotxt{
@@ -113,6 +117,28 @@ button{
   color: white;
 }
 
+
+.canvasbtns{
+	margin-top: 20px;
+}
+#canvasWrapper {
+  width: 70%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+canvas {
+  display: block;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  #canvasWrapper {
+    width: 100%;
+  }
+}
 
 
 
