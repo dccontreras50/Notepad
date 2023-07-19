@@ -243,3 +243,57 @@ window.addEventListener('resize', function() {
 // window.addEventListener('resize', function() {
 //   canvas.setWidth(window.innerWidth - 40);
 // });
+
+
+
+
+
+
+
+
+
+// Cargar el modelo de idioma en español
+const apiKey = '9c3dN4TbrbmN4Mn4kNispUScHVUm5KIj'; // Coloca aquí tu clave de API de "apilayer"
+
+function paraphraseText() {
+    const originalText = document.getElementById('cuadrodetexto').value;
+
+    // Parafrasear el texto utilizando la API de "apilayer"
+    paraphraseWithApilayer(originalText).then(paraphrasedText => {
+        // Extraer el texto de parafraseo sin los símbolos {}
+        const paraphrasedWithoutBrackets = paraphrasedText.replace(/{.*?}/g, '').trim();
+
+        // Actualizar el contenido del div cuadrodetextorespuesta
+        const resultadoDiv = document.getElementById('cuadrodetextorespuesta');
+        resultadoDiv.textContent = paraphrasedWithoutBrackets;
+    }).catch(error => {
+        console.error('Error al parafrasear:', error);
+        const resultadoDiv = document.getElementById('cuadrodetextorespuesta');
+        resultadoDiv.textContent = 'Error al parafrasear el texto';
+    });
+}
+
+async function paraphraseWithApilayer(text) {
+    const apiUrl = 'https://api.apilayer.com/paraphraser';
+
+    try {
+        const response = await fetch(apiUrl, {
+            method: 'POST',
+            headers: {
+                'apikey': apiKey,
+                'Content-Type': 'text/plain'
+            },
+            body: text
+        });
+
+        if (!response.ok) {
+            throw new Error('Error al obtener el parafraseo');
+        }
+
+        const paraphrasedText = await response.text();
+        return paraphrasedText;
+    } catch (error) {
+        throw new Error('Error al parafrasear');
+    }
+}
+
